@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    min-height: 100dvh;
+    color: #F5E6B3;
+    background: linear-gradient(135deg, #0A0A0A 0%, #1C1608 38%, #6B4F10 72%, #D4AF37 100%) fixed !important;
+  }
+
+  #root {
+    min-height: 100dvh;
+    background: transparent !important;
+  }
+}
+
+@layer components {
+  .input {
+    @apply w-full rounded-xl border px-3 py-2.5 text-sm transition outline-none;
+    border-color: rgba(212, 175, 55, 0.35);
+    background-color: #11100d;
+    color: #F5E6B3;
+    font-size: 16px;
+    min-height: 48px;
+  }
+
+  .input::placeholder {
+    color: #BFA765;
+  }
+
+  .input:focus {
+    border-color: #D4AF37;
+    --tw-ring-color: rgba(212, 175, 55, 0.2);
+    @apply ring-2;
+  }
+
+  .input option {
+    background-color: #11100d;
+    color: #F5E6B3;
+  }
+}
