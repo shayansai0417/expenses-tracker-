@@ -3,6 +3,7 @@ import { Plus, Receipt } from 'lucide-react';
 import { useTransactions } from '@/hooks/useTransactions';
 import MetricCards from '@/components/MetricCards';
 import ExpenseBreakdown from '@/components/ExpenseBreakdown';
+import MonthlyTrends from '@/components/MonthlyTrends';
 import TransactionList from '@/components/TransactionList';
 import TransactionForm from '@/components/TransactionForm';
 import Login from '@/components/Login';
@@ -53,6 +54,10 @@ function App() {
             income={metrics.income}
             expenses={metrics.expenses}
           />
+        </section>
+
+        <section>
+          <MonthlyTrends transactions={transactions} />
         </section>
 
         <section>
